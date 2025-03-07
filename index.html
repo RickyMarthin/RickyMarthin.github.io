@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Blog de Notas</title>
+   <link rel="stylesheet" href="resources/styles/style.css">
+</head>
+<body>
+   <header>
+      <h1 id="logo">MI BLOG PERSONAL</h1>
+      <nav>
+         <button class="menu-toggle">☰</button>
+         <ul>
+            <li>
+               <a href="#">Inicio</a>
+            </li>
+            <li>
+               <a href="#">Blog</a>               
+            </li>
+            <li>
+               <a href="#">Calculadora</a>
+            </li>
+            <li>
+               <a href="#">Lista de Favoritos</a>
+            </li>
+         </ul>
+      </nav>
+   </header>
+
+   <main>
+      <article class="blog">
+         <h2>Blog</h2>
+         <table>
+            <tr>
+               <td><label for="title">Titulo:</label></td>
+               <td><input type="text" name="titulo" id="title" placeholder="Escribe un titulo"></td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <textarea name="historia" id="historia" placeholder="Escribe tu historia"></textarea>
+               </td>
+            </tr>
+            <tr>               
+               <td colspan="2">
+                  <input type="file" id="imagen-blog" accept="images"><br>
+                  <img id="imagen-preview" alt="Imagen seleccionada">
+               </td>
+            </tr>
+         </table>                  
+      </article>
+
+      <article class="calculadoraStyle">
+         <form action="" name="form">
+            <h2 id="titleCalculadora">Calculadora</h2>
+            <input type="text" name="visor" id="visor">
+         </form>         
+         <table id="teclado">
+            <td>
+               <input type="button" value="C" class="clear" id="buttonC" onclick="clearVisor(0)">
+               <input type="button" value="⌫" class="btnAux" id="backspace" onclick="backSpace()">
+               <input type="button" value="%" class="btnAux" onclick="porcentaje()">
+               <input type="button" value="÷" class="opButton" onclick="division('/')">
+            </td>
+            <tr>
+               <td>
+                  <input type="button" name="7" class="numero" onclick="printNum(7)" value="7">   
+                  <input type="button" name="8" class="numero" onclick="printNum(8)" value="8"> 
+                  <input type="button" name="9" class="numero" onclick="printNum(9)" value="9">
+                  <input type="button" name="*" class="opButton" onclick="multiplicacion('*')" value="*">
+               </td>               
+            </tr>
+            <tr>
+               <td>
+                  <input type="button" name="4" class="numero" onclick="printNum(4)" value="4">   
+                  <input type="button" name="5" class="numero" onclick="printNum(5)" value="5"> 
+                  <input type="button" name="6" class="numero" onclick="printNum(6)" value="6">
+                  <input type="button" name="-" class="opButton" onclick="diferencia('-')" value="-">
+               </td>               
+            </tr>
+            <tr>
+               <td>
+                  <input type="button" name="1" class="numero" onclick="printNum(1)" value="1">   
+                  <input type="button" name="2" class="numero" onclick="printNum(2)" value="2"> 
+                  <input type="button" name="3" class="numero" onclick="printNum(3)" value="3">
+                  <input type="button" name="+" class="opButton" onclick="sumar('+')" value="+">
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  <input type="button" name="masMenos" class="btnAux" onclick="masMenos()" value="+/-">   
+                  <input type="button" name="0" class="numero" onclick="printNum(0)" value="0"> 
+                  <input type="button" name="punto" class="btnAux" onclick="punto()" value=".">
+                  <input type="button" name="=" class="calcularButton" onclick="calcular()" value="=">
+               </td>
+            </tr>
+         </table>
+      </article>
+
+      <article>
+         <h2>My Favorite Things</h2>
+         <table class="listaFavs">
+            <tr>
+               <td>
+                  <img src="resources/imgs/pokemon.jpg" alt="pokemonIMG">
+               </td>               
+               <td>
+                  <img src="resources/imgs/starcraft.jpeg" alt="starcraftIMG">                  
+               </td>               
+               <td>
+                  <img src="resources/imgs/warcraft.jpeg" alt="warcraftIMG">                  
+               </td>               
+               <td>
+                  <img src="resources/imgs/halo.jpeg" alt="haloIMG">                  
+               </td>               
+               <td>
+                  <img src="resources/imgs/warhammer40k.jpeg" alt="warhammerIMG">                  
+               </td>               
+            </tr>
+            <tr>
+               <td>
+                  <input type="button" value="More-Info" id="pokemon" class="loadInfo">
+                  <div id="pokemonInfo" class="info"></div>
+               </td>
+               <td>
+                  <input type="button" value="More-Info" id="starcraft" class="loadInfo">
+                  <div id="starcraftInfo" class="info"></div>
+               </td>
+               <td>
+                  <input type="button" value="More-Info" id="warcraft" class="loadInfo">
+                  <div id="warcraftInfo" class="info"></div>
+               </td>
+               <td>
+                  <input type="button" value="More-Info" id="halo" class="loadInfo">
+                  <div id="haloInfo" class="info"></div>
+               </td>
+               <td>
+                  <input type="button" value="More-Info" id="warhammer" class="loadInfo">
+                  <div id="warhammerInfo" class="info"></div>
+               </td>
+            </tr>
+         </table>
+      </article>
+   </main>
+
+   <script src="resources/scripts/blog.js"></script>
+   <script src="resources/scripts/calculadora.js"></script>
+   <script src="resources/scripts/imgControl.js"></script>
+   <script src="resources/scripts/controlHTML.js"></script>
+</body>
+</html>
