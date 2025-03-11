@@ -235,36 +235,38 @@ input[type="button"]:active {
 
 
 /* FAVORITE THINGS */
-.scroll-container {
-   display: flex;
-   overflow-x: auto;
-   white-space: nowrap;
-   gap: 15px; /* Espacio entre tarjetas */
-   padding: 10px;
-   scrollbar-width: thin; /* Para navegadores que soportan */
+.listaFavs td {
+   border: 1px solid #5a5a5a;
 }
 
-/* Personaliza la barra de desplazamiento en navegadores WebKit */
-.scroll-container::-webkit-scrollbar {
-   height: 8px;
-}
-
-.scroll-container::-webkit-scrollbar-thumb {
-   background: #888;
-   border-radius: 4px;
-}
-
-.card {
-   flex: 0 0 auto; /* Evita que las tarjetas se reduzcan */
-   width: 250px; /* Ajusta el tamaño de las tarjetas */
-   text-align: center;
-   background: #333;
-   color: white;
-   padding: 10px;
-   border-radius: 10px;
-}
-
-.card img {
+.listaFavs input {   
+   color: rgb(255, 255, 255);
+   font-size: 1.1rem;
    width: 100%;
-   border-radius: 5px;
+   height: 50px;
+   font-weight: bold;
+   background: rgb(124, 0, 161);
+   transition: 0.3es ease-in 50ms;
+}
+
+.listaFavs input:hover {   
+   color: rgb(0, 255, 13);
+   background: rgb(168, 11, 216);
+   cursor: pointer;
+}
+
+.listaFavs input.active {
+   background: rgb(0, 255, 13);
+   color: rgb(0, 0, 0);   
+}
+
+.listaFavs input.active:hover {
+   background: rgb(0, 185, 9);
+   color: rgb(0, 0, 0);   
+}
+
+.listaFavs img {
+   width: 300px;
+   height: auto;
+   cursor: pointer;
 }
