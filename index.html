@@ -99,48 +99,34 @@
 
       <article>
          <h2>My Favorite Things</h2>
-         <table class="listaFavs">
-            <tr>
-               <td>
-                  <img src="resources/imgs/pokemon.jpg" alt="pokemonIMG">
-               </td>               
-               <td>
-                  <img src="resources/imgs/starcraft.jpeg" alt="starcraftIMG">                  
-               </td>               
-               <td>
-                  <img src="resources/imgs/warcraft.jpeg" alt="warcraftIMG">                  
-               </td>               
-               <td>
-                  <img src="resources/imgs/halo.jpeg" alt="haloIMG">                  
-               </td>               
-               <td>
-                  <img src="resources/imgs/warhammer40k.jpeg" alt="warhammerIMG">                  
-               </td>               
-            </tr>
-            <tr>
-               <td>
-                  <input type="button" value="More-Info" id="pokemon" class="loadInfo">
-                  <div id="pokemonInfo" class="info"></div>
-               </td>
-               <td>
-                  <input type="button" value="More-Info" id="starcraft" class="loadInfo">
-                  <div id="starcraftInfo" class="info"></div>
-               </td>
-               <td>
-                  <input type="button" value="More-Info" id="warcraft" class="loadInfo">
-                  <div id="warcraftInfo" class="info"></div>
-               </td>
-               <td>
-                  <input type="button" value="More-Info" id="halo" class="loadInfo">
-                  <div id="haloInfo" class="info"></div>
-               </td>
-               <td>
-                  <input type="button" value="More-Info" id="warhammer" class="loadInfo">
-                  <div id="warhammerInfo" class="info"></div>
-               </td>
-            </tr>
-         </table>
-      </article>
+         <div class="scroll-container">
+             <div class="card">
+                 <img src="resources/imgs/pokemon.jpg" alt="pokemonIMG">
+                 <input type="button" value="More-Info" id="pokemon" class="loadInfo">
+                 <div id="pokemonInfo" class="info"></div>
+             </div>
+             <div class="card">
+                 <img src="resources/imgs/starcraft.jpeg" alt="starcraftIMG">
+                 <input type="button" value="More-Info" id="starcraft" class="loadInfo">
+                 <div id="starcraftInfo" class="info"></div>
+             </div>
+             <div class="card">
+                 <img src="resources/imgs/warcraft.jpeg" alt="warcraftIMG">
+                 <input type="button" value="More-Info" id="warcraft" class="loadInfo">
+                 <div id="warcraftInfo" class="info"></div>
+             </div>
+             <div class="card">
+                 <img src="resources/imgs/halo.jpeg" alt="haloIMG">
+                 <input type="button" value="More-Info" id="halo" class="loadInfo">
+                 <div id="haloInfo" class="info"></div>
+             </div>
+             <div class="card">
+                 <img src="resources/imgs/warhammer40k.jpeg" alt="warhammerIMG">
+                 <input type="button" value="More-Info" id="warhammer" class="loadInfo">
+                 <div id="warhammerInfo" class="info"></div>
+             </div>
+         </div>
+     </article>     
    </main>
 
    <script src="resources/scripts/blog.js"></script>
