@@ -13,23 +13,32 @@
          <button class="menu-toggle">☰</button>
          <ul>
             <li>
-               <a href="#">Inicio</a>
+               <a href="index.html">Inicio</a>
             </li>
             <li>
-               <a href="#">Blog</a>               
+               <a href="#blog">Blog</a>               
             </li>
             <li>
-               <a href="#">Calculadora</a>
+               <a href="#calculadora">Calculadora</a>
             </li>
             <li>
-               <a href="#">Lista de Favoritos</a>
+               <a href="#favoriteList">Lista de Favoritos</a>
+            </li>
+            <li>
+               <select name="select" id="paginas" onchange="cambiarPagina()">
+                  <option value="">Selecciona una Pagina</option>
+                  <option value="verPokemones.html">Ver Pokemones</option>
+                  <option value="crearPokemon.html">Crear Pokemon</option>
+                  <option value="value3">Value 3</option>
+               </select>
             </li>
          </ul>
       </nav>
    </header>
 
    <main>
-      <article class="blog">
+      <!-- SECCION PARA ESCRIBIR COSAS PARA MI BLOG -->
+      <article id="blog">
          <h2>Blog</h2>
          <table>
             <tr>
@@ -49,55 +58,8 @@
             </tr>
          </table>                  
       </article>
-
-      <article class="calculadoraStyle">
-         <form action="" name="form">
-            <h2 id="titleCalculadora">Calculadora</h2>
-            <input type="text" name="visor" id="visor">
-         </form>         
-         <table id="teclado">
-            <td>
-               <input type="button" value="C" class="clear" id="buttonC" onclick="clearVisor(0)">
-               <input type="button" value="⌫" class="btnAux" id="backspace" onclick="backSpace()">
-               <input type="button" value="%" class="btnAux" onclick="porcentaje()">
-               <input type="button" value="÷" class="opButton" onclick="division('/')">
-            </td>
-            <tr>
-               <td>
-                  <input type="button" name="7" class="numero" onclick="printNum(7)" value="7">   
-                  <input type="button" name="8" class="numero" onclick="printNum(8)" value="8"> 
-                  <input type="button" name="9" class="numero" onclick="printNum(9)" value="9">
-                  <input type="button" name="*" class="opButton" onclick="multiplicacion('*')" value="*">
-               </td>               
-            </tr>
-            <tr>
-               <td>
-                  <input type="button" name="4" class="numero" onclick="printNum(4)" value="4">   
-                  <input type="button" name="5" class="numero" onclick="printNum(5)" value="5"> 
-                  <input type="button" name="6" class="numero" onclick="printNum(6)" value="6">
-                  <input type="button" name="-" class="opButton" onclick="diferencia('-')" value="-">
-               </td>               
-            </tr>
-            <tr>
-               <td>
-                  <input type="button" name="1" class="numero" onclick="printNum(1)" value="1">   
-                  <input type="button" name="2" class="numero" onclick="printNum(2)" value="2"> 
-                  <input type="button" name="3" class="numero" onclick="printNum(3)" value="3">
-                  <input type="button" name="+" class="opButton" onclick="sumar('+')" value="+">
-               </td>
-            </tr>
-            <tr>
-               <td>
-                  <input type="button" name="masMenos" class="btnAux" onclick="masMenos()" value="+/-">   
-                  <input type="button" name="0" class="numero" onclick="printNum(0)" value="0"> 
-                  <input type="button" name="punto" class="btnAux" onclick="punto()" value=".">
-                  <input type="button" name="=" class="calcularButton" onclick="calcular()" value="=">
-               </td>
-            </tr>
-         </table>
-      </article>
-
-      <article>
+      <!-- LISTA DE MIS COSAS FAVORITAS -->
+      <article id="favoriteList">
          <h2>My Favorite Things</h2>
          <table class="listaFavs">
             <tr>
@@ -140,6 +102,55 @@
                </td>
             </tr>
          </table>
+      </article>      
+      <!-- UNA CALCULADORA WN -->
+      <article id="calculadora">
+         <h2 id="titleCalculadora">Calculadora</h2>
+         <div class="calculadoraStyle">
+            <form action="" name="form">            
+               <input type="text" name="visor" id="visor">
+            </form>         
+            <table id="teclado">
+               <td>
+                  <input type="button" value="C" class="clear" id="buttonC" onclick="clearVisor(0)">
+                  <input type="button" value="⌫" class="btnAux" id="backspace" onclick="backSpace()">
+                  <input type="button" value="%" class="btnAux" onclick="porcentaje()">
+                  <input type="button" value="÷" class="opButton" onclick="division('/')">
+               </td>
+               <tr>
+                  <td>
+                     <input type="button" name="7" class="numero" onclick="printNum(7)" value="7">   
+                     <input type="button" name="8" class="numero" onclick="printNum(8)" value="8"> 
+                     <input type="button" name="9" class="numero" onclick="printNum(9)" value="9">
+                     <input type="button" name="*" class="opButton" onclick="multiplicacion('*')" value="*">
+                  </td>               
+               </tr>
+               <tr>
+                  <td>
+                     <input type="button" name="4" class="numero" onclick="printNum(4)" value="4">   
+                     <input type="button" name="5" class="numero" onclick="printNum(5)" value="5"> 
+                     <input type="button" name="6" class="numero" onclick="printNum(6)" value="6">
+                     <input type="button" name="-" class="opButton" onclick="diferencia('-')" value="-">
+                  </td>               
+               </tr>
+               <tr>
+                  <td>
+                     <input type="button" name="1" class="numero" onclick="printNum(1)" value="1">   
+                     <input type="button" name="2" class="numero" onclick="printNum(2)" value="2"> 
+                     <input type="button" name="3" class="numero" onclick="printNum(3)" value="3">
+                     <input type="button" name="+" class="opButton" onclick="sumar('+')" value="+">
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <input type="button" name="masMenos" class="btnAux" onclick="masMenos()" value="+/-">   
+                     <input type="button" name="0" class="numero" onclick="printNum(0)" value="0"> 
+                     <input type="button" name="punto" class="btnAux" onclick="punto()" value=".">
+                     <input type="button" name="=" class="calcularButton" onclick="calcular()" value="=">
+                  </td>
+               </tr>
+            </table>
+         </div>
       </article>
    </main>
 
@@ -147,5 +158,6 @@
    <script src="resources/scripts/calculadora.js"></script>
    <script src="resources/scripts/imgControl.js"></script>
    <script src="resources/scripts/controlHTML.js"></script>
+   <script src="resources/scripts/selectPage.js"></script>
 </body>
 </html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Ver Pokemones</title>
+   <link rel="stylesheet" href="resources/styles/style.css">
+   <link rel="stylesheet" href="resources/styles/style3.css">
+</head>
+<body>
+   <header>
+      <h1 id="logo">MI BLOG PERSONAL</h1>
+      <nav>
+         <button class="menu-toggle">☰</button>
+         <ul>
+            <li>
+               <a href="index.html">Inicio</a>
+            </li>
+            <li>
+               <a href="#blog">Blog</a>               
+            </li>
+            <li>
+               <a href="#calculadora">Calculadora</a>
+            </li>
+            <li>
+               <a href="#favoriteList">Lista de Favoritos</a>
+            </li>
+            <li>
+               <select name="select" id="paginas" onchange="cambiarPagina()">
+                  <option value="">Selecciona una Pagina</option>
+                  <option value="verPokemones.html">Ver Pokemones</option>
+                  <option value="crearPokemon.html">Crear Pokemon</option>
+                  <option value="value3">Value 3</option>
+               </select>
+            </li>
+         </ul>
+      </nav>
+   </header>
+
+   <main>
+      <article class="sendPokemon">
+         <form onsubmit="procesarPokemon()">            
+            <table>
+               <h2>AGREGAR POKEMON</h2>
+               <tr class="name-field">                  
+                   <td><label for="GET-name">NOMBRE:</label></td>
+                   <td class="content-Field"><input id="GET-name" type="text" name="name" required></td>
+               </tr>
+
+               <tr class="img-field">
+                  <td><label for="GET-img">IMAGEN:</label></td>
+                  <td class="content-Field">                      
+                      <input id="GET-img" type="file" name="image" accept="image/*" required onchange="previewImage(event)">
+                      <br>
+                      <div class="image-preview">
+                          <img id="preview" src="resources/imgs/foto.png" alt="Vista previa">                                                    
+                      </div>
+                      <label for="GET-img" class="custom-file-upload">Seleccionar Imagen</label>
+                  </td>
+               </tr>
+
+               <tr class="send-field">
+                   <td colspan="2" class="center">
+                       <input type="submit" value="ENVIAR">
+                   </td>
+               </tr>
+           </table>
+         </form>   
+     </article>
+
+     <article class="verPokemon">
+         
+     </article>
+   </main>
+   
+   <script src="resources/scripts/calculadora.js"></script>
+   <script src="resources/scripts/imgControl.js"></script>
+   <script src="resources/scripts/controlHTML.js"></script>
+   <script src="resources/scripts/selectPage.js"></script>
+</body>
+</html>

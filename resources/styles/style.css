@@ -6,7 +6,7 @@
 }
 
 body {
-   background: linear-gradient(45deg, rgba(50,50,50,1) 0%, rgb(71, 71, 71) 100%);
+   background: rgb(41, 40, 40);
    color: whitesmoke;
 }
 
@@ -16,14 +16,14 @@ header {
    position: sticky;
    top: 0;
    display: flex;
-   justify-content: space-between;      
+   justify-content: space-between;
    align-items: center;
    padding: 2vb;
    z-index: 1000;
 }
 
 h2 {
-   font-size: 3.5em;
+   font-size: 2em;
 }
 
 .menu-toggle {
@@ -74,7 +74,7 @@ nav ul li a:hover {
       position: absolute;
       top: 60px;
       right: 10px;
-      background-color: rgba(242, 110, 12, 0.9);
+      background-color: rgb(242, 110, 12, 0.8);
       width: 200px;
       border-radius: 5px;
       padding: 10px;
@@ -97,7 +97,7 @@ main {
 }
 
 /* ARTICULOS BLOG */
-.blog{
+#blog{
    display: flex;
    flex-direction: column;
    align-items: center;
@@ -141,12 +141,6 @@ textarea {
    text-align: center;
 }
 
-#titleCalculadora {
-   font-size: 1.8rem;
-   margin-bottom: 10px;
-   color: whitesmoke;
-}
-
 #visor {
    width: 100%;
    height: 50px;   
@@ -156,12 +150,16 @@ textarea {
    border-radius: 8px;
    background: white;
    box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.2);
-   margin-bottom: 15px;
 }
 
 #teclado {
-   width: 100%;
+   width: 100%;   
    justify-content: center;
+}
+
+#teclado td {
+   margin: 0px;
+   padding: 0px;
 }
 
 /* Botones generales */

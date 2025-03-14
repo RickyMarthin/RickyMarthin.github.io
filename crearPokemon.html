@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Crear Pokemon</title>
+   <link rel="stylesheet" href="resources/styles/style.css">
+   <link rel="stylesheet" href="resources/styles/style2.css">
+</head>
+<body>
+   <header>
+      <h1 id="logo">MI BLOG PERSONAL</h1>
+      <nav>
+         <button class="menu-toggle">☰</button>
+         <ul>
+            <li>
+               <a href="index.html">Inicio</a>
+            </li>
+            <li>
+               <a href="#blog">Blog</a>               
+            </li>
+            <li>
+               <a href="#calculadora">Calculadora</a>
+            </li>
+            <li>
+               <a href="#favoriteList">Lista de Favoritos</a>
+            </li>
+            <li>
+               <select name="select" id="paginas" onchange="cambiarPagina()">
+                  <option value="">Selecciona una Pagina</option>
+                  <option value="verPokemones.html">Ver Pokemones</option>
+                  <option value="crearPokemon.html">Crear Pokemon</option>
+                  <option value="value3">Value 3</option>
+               </select>
+            </li>
+         </ul>
+      </nav>
+   </header>
+
+   <main>
+      <article class="anuncio">
+         <div class="info-body">
+            <h1>¿QUIERES CREAR TU PROPIO <span>POKEMON</span>?</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, a quas corporis, placeat quos culpa nisi reiciendis accusamus consequuntur dolorum dolore, laborum neque? Dolorem id architecto quis debitis nesciunt tempore!</p>
+            <a href="https://card-pokemon.com/es" target="_blank" rel="noreferrer noopener"><input type="button" value="CREAR POKEMON"></a>
+         </div>
+         <div class="info-img">
+            <img src="resources/imgs/pikachuRayos.gif" alt="Pikachu rayos GIF" class="img-size1">
+         </div>         
+      </article>
+      <article class="anuncio">
+         <div class="info-img">
+            <img src="resources/imgs/Poketrainers-min.webp" alt="Pikachu rayos GIF" class="img-size2">
+         </div>
+         <div class="info-body">
+            <h1>¿QUIERES CREAR TU PROPIO <span>POKEMON</span>?</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, a quas corporis, placeat quos culpa nisi reiciendis accusamus consequuntur dolorum dolore, laborum neque? Dolorem id architecto quis debitis nesciunt tempore!</p>
+            <a href="https://openart.ai/es/generador/entrenador-de-pokemon" target="_blank" rel="noreferrer noopener"><input type="button" value="CREAR POKEMON"></a>
+         </div>         
+      </article>
+   </main>
+
+   <script src="resources/scripts/blog.js"></script>
+   <script src="resources/scripts/calculadora.js"></script>
+   <script src="resources/scripts/imgControl.js"></script>
+   <script src="resources/scripts/controlHTML.js"></script>
+   <script src="resources/scripts/selectPage.js"></script>
+</body>
+</html>
