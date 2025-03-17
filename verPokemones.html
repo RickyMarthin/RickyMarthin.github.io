@@ -39,23 +39,23 @@
 
    <main>
       <article class="sendPokemon">
-         <form onsubmit="procesarPokemon()">            
+         <form id="pokemonForm">            
             <table>
                <h2>AGREGAR POKEMON</h2>
                <tr class="name-field">                  
-                   <td><label for="GET-name">NOMBRE:</label></td>
-                   <td class="content-Field"><input id="GET-name" type="text" name="name" required></td>
+                   <td><label for="poke-name">NOMBRE:</label></td>
+                   <td class="content-Field"><input id="poke-name" type="text" name="name" required></td>
                </tr>
 
                <tr class="img-field">
                   <td><label for="GET-img">IMAGEN:</label></td>
                   <td class="content-Field">                      
-                      <input id="GET-img" type="file" name="image" accept="image/*" required onchange="previewImage(event)">
+                      <input id="poke-img" type="file" name="image" accept="image/*" required onchange="previewImage(event)">
                       <br>
                       <div class="image-preview">
                           <img id="preview" src="resources/imgs/foto.png" alt="Vista previa">                                                    
                       </div>
-                      <label for="GET-img" class="custom-file-upload">Seleccionar Imagen</label>
+                      <label for="poke-img" class="custom-file-upload">Seleccionar Imagen</label>
                   </td>
                </tr>
 
@@ -69,11 +69,12 @@
      </article>
 
      <article class="verPokemon">
-         
+         <h2 id="post-poke-name"></h2>
+         <img id="mostrarPokemon" src="" alt="MostrarPokemon">
      </article>
    </main>
    
-   <script src="resources/scripts/calculadora.js"></script>
+   <script src="resources/scripts/verPokemon.js"></script>
    <script src="resources/scripts/imgControl.js"></script>
    <script src="resources/scripts/controlHTML.js"></script>
    <script src="resources/scripts/selectPage.js"></script>

@@ -1,5 +1,13 @@
+main {
+   display: flex;
+   justify-content: center; /* Distribuye los elementos */
+   align-items: start; /* Alinea arriba */
+   gap: 25%; /* Espacio entre artículos */
+   padding: 20px;
+}
+
 .sendPokemon {
-   width: 30vw;
+   width: 40vw;
    border: 1px solid black;
    color: rgb(255, 255, 255);
    background: rgb(194, 40, 40);
@@ -89,7 +97,7 @@
 }
 
 /* Oculta el input original */
-#GET-img {
+#poke-img {
    display: none;
 }
 
@@ -119,4 +127,17 @@
    max-height: 80%;
    object-fit: contain;
    display: block; /* Hace que la imagen siempre esté visible */
+}
+
+.verPokemon {
+   max-width: 30vw;
+   display: flex;
+   flex-direction: column;
+   align-self: center;
+}
+
+#mostrarPokemon {
+   width: 100%;
+   max-width: 300px; /* Tamaño máximo de la imagen */
+   margin-top: 10px;
 }
